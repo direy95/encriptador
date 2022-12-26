@@ -7,29 +7,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="#">
     <title>Encriptador</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <header>
-        <h1>Encriptador</h1>
-    </header>
     <main>
-        <section>
-            <textarea name="input" id="input" cols="30" rows="10"
-            placeholder="Ingrese el texto en minúsculas y sin carácteres especiales">
-            </textarea>
-            <textarea name="output" id="output" cols="30" rows="10">
-            </textarea>
-
+        <section class="principal">
+            <header>
+                <h1 class="titulo">Encriptador</h1>
+            </header>
+            <textarea name="input" id="input" class="principal__textarea" cols="30" rows="10 "
+                placeholder="Ingrese el texto en minúsculas y sin carácteres especiales"
+                pattern="[a-z]{1,15}">
+                </textarea>
+            <div class="principal__botones">
+                <button id="encript">Encriptar</button>
+                <button id="decrypt">Desencriptar</button>
+            </div>
+            <footer>
+                <h4>Creada por Diego Rey</h4>
+            </footer>
         </section>
-        <section>
-            <button id="encript">Encriptar</button>
-            <button id="decrypt">Desencriptar</button>
-        </section> 
+        <div id="output">
+            <div class="output__texto" id="output__texto">
+                <div class="output__texto-nodecrypt">
+                    <img src="/assets/muñeco.svg" alt="">
+                    <h4 class="output__texto-nomensaje">Ningun mensaje fue encontrado</h4>
+                </div>
+            </div>
+        </div>
     </main>
-    <footer>
-        <h4>Creada por Diego Rey</h4>
-    </footer>
     <script src="/script.js"></script>
 </body>
 
