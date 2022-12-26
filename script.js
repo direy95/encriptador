@@ -56,16 +56,16 @@ encrpitarBtn.addEventListener("click", () => {
     if(validarInput(input)){
         texto = encriptar(input.value);
         output.innerHTML = texto;
-    }else{
     }
 });
 
 decryptBtn.addEventListener("click", () => {
     const input = document.getElementById("input");
     const output = document.getElementById("output__texto");
-
-    texto = desencriptar(input.value);
-    output.innerHTML = texto;
+    if(validarInput(input)){
+        texto = desencriptar(input.value);
+        output.innerHTML = texto;
+    }
 });
 
 const validarInput = (input) =>{
